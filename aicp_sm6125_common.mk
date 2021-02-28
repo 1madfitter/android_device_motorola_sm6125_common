@@ -34,6 +34,10 @@ $(call inherit-product, device/motorola/dynamic_common/aicp-dynamic_common.mk)
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/motorola/sm6125_common/sm6125_common.mk)
 
+#GAPPS
+TARGET_GAPPS_ARCH := arm64
+$(call inherit-product, vendor/gapps/config.mk)
+
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Discard inherited values and use our own instead.
